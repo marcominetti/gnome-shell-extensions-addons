@@ -59,7 +59,7 @@ MyPopupMenuItem.prototype =
         if (gicon)
           this.icon = new St.Icon({ gicon: gicon, style_class: 'popup-menu-icon' });
         else
-          this.icon = new St.Icon({ icon_name: 'edit-clear-symbolic', icon_size: 22 });
+          this.icon = new St.Icon({ icon_name: 'edit-clear-symbolic', icon_size: 14 });
 
         this.box.add(this.icon);
         this.label = new St.Label({ text: text });
@@ -91,7 +91,7 @@ RecentItems.prototype =
 
         this.conhandler = this.RecentManager.connect('changed', Lang.bind(this, this._redisplay));
 
-        Main.panel.addToStatusArea('recent-items', this);
+        Main.panel.addToStatusArea('recent-items', this, 4, 'left');
     },
 
     _onDestroy: function() {
