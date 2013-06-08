@@ -1,0 +1,7 @@
+{
+    "shell-version": ["3.8"],
+    "uuid": "favorites@cvine.org",
+    "name": "Favorites Menu",
+    "description": "Provide panel menu for favorites",
+    "url": "http://www.cvine.plus.com/favorites/index.html"
+}

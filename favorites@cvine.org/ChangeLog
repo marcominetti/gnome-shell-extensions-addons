@@ -1,0 +1,75 @@
+Version 0.0.8 (12 April 2013)
+-------------
+
+	org.gnome.shell.extensions.favorites.gschema.xml, extension.js,
+	prefs.js, metadata.json, stylesheet.css, favorites.pot, en_GB.po:
+	convert the extension for use with gnome-shell-3.8 (preferences
+	for the extension can now only be changed via the gnome shell
+	extensions preferences dialog, gnome-tweak-tool or dconf, because
+	gnome-shell-3.8 does not permit the pull-down menu to delete and
+	then reinsert itself).
+
+Version 0.0.7 (8 January 2013)
+-------------
+
+	extension.js: prevent timer callback executing after the system
+	calls disable() immediately after calling enable (thanks to Norman
+	Smith for debugging this one.)
+
+Version 0.0.6 (7 October 2012)
+-------------
+
+	extension.js, metadata.json: convert the extension for use with
+	gnome-shell-3.6.  This includes adopting the new public interface
+	for adding items to the panel, which in turn requires destroying
+	and reconstructing the favorites button when the user moves it
+	postion on the panel.
+
+Version 0.0.5 (15 July 2012)
+-------------
+
+	extension.js, prefs.js, po/favorites.pot, po/en_GB.po,
+	schemas/org.gnome.shell.extensions.favorites.gschema.xml: use
+	GSettings to save preferences, and provide the option of using
+	gnome-shell-extension-prefs only to set preferences (so allowing
+	the preferences entry in the drop-down menu to be removed).
+
+	README: add README file.
+
+Version 0.0.4 (24 April 2012)
+-------------
+
+	extension.js, metadata.json: convert the extension for use with
+	gnome-shell-3.4.
+
+Version 0.0.3 (11 March 2012)
+-------------
+
+	extension.js, stylesheet.css, po/favorites.pot, po/en_GB.po:
+	enable the user to select the position of the panel icon in the
+	left panel box, by means of the Preferences item of the drop-down
+	menu.
+
+Version 0.0.2 (8 March 2012)
+-------------
+
+	ChangeLog: add this ChangeLog file.
+
+	extension.js: move setting of textdomain from enable() function to
+	init() function and use the gnome-shell-3.2 extension system to
+	find the locale path.
+
+	extension.js: obtain favorites list by using higher level
+	appFavorites functions instead of going directly to GSettings.
+
+	extension.js: extract the value of FAVORITE_APPS_KEY from the
+	appFavorites object rather than reinventing it ourselves.
+
+	extension.js, stylesheet.css, po/favorites.pot, po/en_GB.po:
+	provide an option to display the panel button with an icon instead
+	of text.
+
+Version 0.0.1 (27 December 2011)
+-------------
+
+	Initial release
