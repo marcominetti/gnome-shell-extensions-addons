@@ -52,10 +52,11 @@ function set_panel_display(button) {
     if (menu_actor) button.actor.remove_actor(menu_actor);
 
     if (settings.get_boolean("icon")) {
-        let fpath = Gio.file_new_for_path(ExtensionUtils.getCurrentExtension().path +
+        /*let fpath = Gio.file_new_for_path(ExtensionUtils.getCurrentExtension().path +
                                           "/emblem-favorite.png");
         let icon = new St.Icon({gicon: new Gio.FileIcon({file: fpath}),
-                                style_class: "favorites-icon"});
+                                style_class: "favorites-icon"});*/
+        let icon = new St.Icon({ icon_size: 16, icon_name: 'non-starred-symbolic'  }); 
         button.actor.add_actor(icon);
         menu_actor = icon;
     }
@@ -73,7 +74,7 @@ function add_item(button, app) {
 				pack_start: false,
 				style_class: "favorites-menu-box"});
     item.addActor(box);
-    let icon = app.create_icon_texture(24);
+    let icon = app.create_icon_texture(16);
     box.add(icon);
     let label = new St.Label({text: app.get_name()});
     box.add(label);
